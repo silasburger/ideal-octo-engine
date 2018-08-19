@@ -12,12 +12,10 @@
   <header>
     <h3>Meme Genereator</h3>
   </header>
-  <form name="addMeme" action="#" method="POST">
     <label for="memeURL">Meme image:</label><input type="text" id="memeURL" name="memeURL" placeholder="Image URL">
     <label for="upperText"></label>Upper text:<input type="text" id="upperText" name="upperText" placeholder="Upper text">
     <label for="lowerText">Lower text:</label><input type="text" id="lowerText" name="lowerText" placeholder="Lower text">
-    <input type="submit" onclick="appendMeme();">
-  </form>
+    <button onclick="appendMeme();">Submit!</button>
   <div id="grid">
     <div class="meme" id="1"></div>
     <div class="meme" id="2"></div>
