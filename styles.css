@@ -1,22 +1,24 @@
-* {
-  display: border-box;
-}
-
 .grid {
   display: flex;
-  background: dodgerblue;
-  flex-direction: row;
-  width: 1000px;
-  height: 1000px;
 }
 
 .meme {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px firebrick solid;
-  border-radius: 5px;
-  margin: 20px;
-  width: 100px;
-  height: 100px;
+  position: relative;
+  border: 1px #ccc solid;
+}
+
+p {
+  font-family: impact;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  position: absolute;
+  color: black;
+}
+
+#top {
+  top: 0;
+}
+
+#bottom {
+  bottom: 0;
 }
