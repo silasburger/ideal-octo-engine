@@ -8,9 +8,7 @@ var appendMeme = function() {
   document.getElementsByClassName('meme')[count].style.backgroundRepeat =
     'no-repeat';
   document.getElementsByClassName('meme')[count].innerHTML =
-    '<p> + ' + upperText + '</p>';
-  document.getElementsByClassName('meme')[count].innerHTML =
-    '<p>' + lowerText + '</p>';
+    '<p>' + upperText + '</p>' + '<p>' + lowerText + '</p>';
   console.log('function run!');
   count++;
 };

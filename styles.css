@@ -4,7 +4,10 @@
 
 .grid {
   display: flex;
-  border: 2px dodgerblue solid;
+  background: dodgerblue;
+  flex-direction: row;
+  width: 1000px;
+  height: 1000px;
 }
 
 .meme {
@@ -14,4 +17,6 @@
   border: 1px firebrick solid;
   border-radius: 5px;
   margin: 20px;
+  width: 100px;
+  height: 100px;
 }
