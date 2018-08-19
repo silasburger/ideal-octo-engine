@@ -3,14 +3,15 @@
 }
 
 .grid {
-  display: grid;
-  grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
-  align-items: space-around;
+  display: flex;
   border: 2px dodgerblue solid;
-  /* flex-wrap */
 }
 
 .meme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 1px firebrick solid;
   border-radius: 5px;
+  margin: 20px;
 }
