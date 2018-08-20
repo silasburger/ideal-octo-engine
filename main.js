@@ -5,9 +5,10 @@ var appendMeme = function() {
     var upperText = document.getElementById('upperText').value;
     var lowerText = document.getElementById('lowerText').value;
     var container = document.getElementById('container');
+    var child = document.createElement('div');
 
-    container.appendChild(document.createElement('div'));
-
+    child.className = 'meme';
+    container.appendChild(child);
     container.getElementsByTagName('div')[count].style.backgroundImage =
       'URL(' + img + ')';
     container.getElementsByTagName('div')[count].style.backgroundRepeat =
@@ -35,10 +36,11 @@ document.getElementById('addMeme').addEventListener('click', function() {
   document.getElementById('memeURL').value = '';
 });
 
-document
-  .getElementsByClassName('delete')
-  .addEventListener('click', function(e) {
-    e.target.remove();
-    alert('clicked');
-    console.log('clicked');
-  });
+document.getElementById('container').addEventListener('click', function(e) {
+  var closestDel = e.target.closest('.delete');
+  var closestMeme = e.target.closest('.meme');
+  if (e.target === closestDel && closestMeme.contains(e.target)) {
+    closestMeme.remove();
+    console.log('ok');
+  }
+});
