@@ -6,26 +6,18 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
 </head>
 
 <body>
-  <header>
-    <h3>Meme Genereator</h3>
-  </header>
-    <label for="memeURL">Meme image:</label><input type="text" id="memeURL" name="memeURL" placeholder="Image URL">
-    <label for="upperText"></label>Upper text:<input type="text" id="upperText" name="upperText" placeholder="Upper text">
-    <label for="lowerText">Lower text:</label><input type="text" id="lowerText" name="lowerText" placeholder="Lower text">
-    <button id="addMeme">Submit!</button>
-  <div id="grid">
-    <div class="meme" id="1">1</div>
-    <div class="meme" id="2">2</div>
-    <div class="meme" id="3">3</div>
-    <div class="meme" id="4">4</div>
-    <div class="meme" id="5">5</div>
-    <div class="meme" id="6">6</div>
-    <div class="meme" id="7">7</div>
-    <div class="meme" id="8">8</div>
-    <div class="meme" id="9">9</div>
+  <div id="container">  
+    <div class="inputs">
+      <h1>Meme Genereator</h1>
+      <section><label for="memeURL">Meme image: </label><input type="text" id="memeURL" name="memeURL" placeholder="Image URL"></section>
+      <section><label for="upperText">Upper text: </label><input type="text" id="upperText" name="upperText" placeholder="Upper text"></section>
+      <section><label for="lowerText">Lower text: </label><input type="text" id="lowerText" name="lowerText" placeholder="Lower text"></section>      
+      <button id="addMeme">Submit!</button>
+    </div>
   </div>
 </body>
 <script src="main.js"></script>
