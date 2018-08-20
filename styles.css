@@ -6,17 +6,17 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  margin-left: 50px;
+  margin-left: 30px;
 }
 
-#container div {
+.meme {
   position: relative;
   border: 7px aliceblue solid;
   border-radius: 5px;
   width: 50px;
   height: 350px;
   width: 350px;
-  margin: 3px;
+  margin: 15px;
 }
 
 p {
@@ -106,8 +106,21 @@ button {
   height: 10px;
   width: 10px;
   border-radius: 5px;
-  top: 0;
-  right: 0;
-  background-color: firebrick;
+  top: -15px;
+  right: -15px;
+  background-color: black;
   border: 2px double black;
+}
+
+.delete:hover {
+  background-color: firebrick;
+}
+
+#inputs {
+  border: none;
+  position: relative;
+  width: 50px;
+  height: 350px;
+  width: 350px;
+  margin: 22px;
 }
