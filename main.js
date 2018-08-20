@@ -1,33 +1,24 @@
-var appendMeme = function() {
-  var count = 1;
-  return function() {
-    var img = document.getElementById('memeURL').value;
-    var upperText = document.getElementById('upperText').value;
-    var lowerText = document.getElementById('lowerText').value;
-    var container = document.getElementById('container');
-    var child = document.createElement('div');
+var newMeme = function() {
+  var img = document.getElementById('memeURL').value;
+  var upperText = document.getElementById('upperText').value;
+  var lowerText = document.getElementById('lowerText').value;
+  var container = document.getElementById('container');
+  var child = document.createElement('div');
 
-    child.className = 'meme';
-    container.appendChild(child);
-    container.getElementsByTagName('div')[count].style.backgroundImage =
-      'URL(' + img + ')';
-    container.getElementsByTagName('div')[count].style.backgroundRepeat =
-      'no-repeat';
-    container.getElementsByTagName('div')[count].style.backgroundSize =
-      '100% 100%';
-    container.getElementsByTagName('div')[count].innerHTML =
-      '<p class="top">' +
-      upperText +
-      '</p>' +
-      '<p class="bottom">' +
-      lowerText +
-      '</p>' +
-      '<span class="delete"><span>';
-    ++count;
-  };
+  child.className = 'meme';
+  child.style.backgroundImage = 'URL(' + img + ')';
+  child.style.backgroundRepeat = 'no-repeat';
+  child.style.backgroundSize = '100% 100%';
+  child.innerHTML =
+    '<p class="top">' +
+    upperText +
+    '</p>' +
+    '<p class="bottom">' +
+    lowerText +
+    '</p>' +
+    '<span class="delete"><span>';
+  container.appendChild(child);
 };
-
-var newMeme = appendMeme();
 
 document.getElementById('addMeme').addEventListener('click', function() {
   newMeme();
@@ -41,6 +32,5 @@ document.getElementById('container').addEventListener('click', function(e) {
   var closestMeme = e.target.closest('.meme');
   if (e.target === closestDel && closestMeme.contains(e.target)) {
     closestMeme.remove();
-    console.log('ok');
   }
 });
