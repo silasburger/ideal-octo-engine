@@ -13,7 +13,6 @@ body {
   position: relative;
   border: 7px aliceblue solid;
   border-radius: 5px;
-  width: 50px;
   height: 350px;
   width: 350px;
   margin: 15px;
@@ -28,6 +27,9 @@ p {
   text-align: center;
   padding: 0 3px 0 3px;
   margin: 0;
+  text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000,
+    -2px 2px 0 #000, 0px 2px 0 #000, 2px 0px 0 #000, 0px -2px 0 #000,
+    -2px 0px 0 #000, 2px 2px 5px #000;
 }
 
 .top {

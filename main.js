@@ -2,6 +2,8 @@ var newMeme = function() {
   var img = document.getElementById('memeURL').value;
   var upperText = document.getElementById('upperText').value;
   var lowerText = document.getElementById('lowerText').value;
+  var width = document.getElementById('width').value;
+  var height = document.getElementById('height').value;
   var container = document.getElementById('container');
   var child = document.createElement('div');
 
@@ -9,6 +11,8 @@ var newMeme = function() {
   child.style.backgroundImage = 'URL(' + img + ')';
   child.style.backgroundRepeat = 'no-repeat';
   child.style.backgroundSize = '100% 100%';
+  child.style.height = height + 'px';
+  child.style.width = width + 'px';
   child.innerHTML =
     '<p class="top">' +
     upperText +
